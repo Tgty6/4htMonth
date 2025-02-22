@@ -41,5 +41,6 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, related_name='tags', blank=True, )
 
 
+
     def __str__(self):
         return f'{self.title} - {self.content}'

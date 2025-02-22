@@ -16,6 +16,7 @@ class PostCreateForm(forms.Form):
 
 
 
+
     def clean_title(self):
         title = self.cleaned_data.get('title')
         if title and title.lower() ==  'python':

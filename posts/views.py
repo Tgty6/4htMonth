@@ -35,6 +35,7 @@ def post_detail_view(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'posts/post_detail.html', context={'post': post})
 
+
 def post_create_view(request):
     global post
     if request.method == "GET":

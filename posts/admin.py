@@ -10,5 +10,6 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('title', 'content')
     ordering = ('rate',)
 
+
 admin.site.register(models.Category)
 admin.site.register(models.Tag)
