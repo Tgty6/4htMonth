@@ -1,5 +1,14 @@
 from django.contrib import admin
-from posts.models import Post
+from . import models
 
 
-admin.site.register(Post)
+
+@admin.register(models.Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'rate')
+    list_filter = ('rate',)
+    search_fields = ('title', 'content')
+    ordering = ('rate',)
+
+admin.site.register(models.Category)
+admin.site.register(models.Tag)
