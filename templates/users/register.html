@@ -3,14 +3,16 @@
 
 {% block content %}
 <style>
+
     .form-container {
         max-width: 350px;
         margin: 0 auto;
         padding: 20px;
         background: #f9f9f9;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
+
 
     .form-container p {
         display: flex;
@@ -30,7 +32,7 @@
         width: 100%;
     }
 
-    /* Кнопки */
+
     .form-container button {
         width: 100%;
         padding: 10px;
@@ -42,13 +44,13 @@
         color: white;
     }
 
-    /* Белые кнопки на темном фоне */
+
     body.dark-mode .form-container button {
         background-color: white;
         color: black;
     }
 
-    /* Ховер-эффект */
+
     .form-container button:hover {
         background-color: #0056b3;
     }
@@ -62,7 +64,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Save</button>
+        <button type="submit">Register</button>
     </form>
 </div>
 

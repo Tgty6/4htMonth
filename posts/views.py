@@ -5,6 +5,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from posts.models import Post
 
 from posts.forms import PostCreateForm
+from django.contrib.auth.decorators import login_required
 
 
 def test_view():
@@ -22,7 +23,7 @@ def html_view(request):
 def video(request):
     return render(request, "video.html")
 
-
+@login_required(login_url='/login/')
 def post_list_view(request):
     posts = Post.objects.all()
     print(posts)
@@ -30,12 +31,12 @@ def post_list_view(request):
         print(post.title)
     return render(request, 'posts/post_list.html', context={'posts': posts})
 
-
+@login_required(login_url='/login/')
 def post_detail_view(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'posts/post_detail.html', context={'post': post})
 
-
+@login_required(login_url='/login/')
 def post_create_view(request):
     global post
     if request.method == "GET":

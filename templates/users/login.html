@@ -30,7 +30,7 @@
         width: 100%;
     }
 
-    /* Кнопки */
+
     .form-container button {
         width: 100%;
         padding: 10px;
@@ -42,13 +42,13 @@
         color: white;
     }
 
-    /* Белые кнопки на темном фоне */
+
     body.dark-mode .form-container button {
         background-color: white;
         color: black;
     }
 
-    /* Ховер-эффект */
+
     .form-container button:hover {
         background-color: #0056b3;
     }
@@ -62,7 +62,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Save</button>
+        <button type="submit">Login</button>
     </form>
 </div>
 
