@@ -22,7 +22,7 @@ from posts.views import (
     post_detail_view,
     cookies_view, video,
     post_create_view)
-from users.views import register_view, login_view
+from users.views import register_view, login_view, logout_view
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -40,7 +40,7 @@ urlpatterns = [
     path("posts/create/", post_create_view),
     path("register/", register_view),
     path("login/", login_view),
-    path("logout/", login_view),
+    path("logout/", logout_view),
 
 ]
 
